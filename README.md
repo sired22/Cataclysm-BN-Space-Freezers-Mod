@@ -14,6 +14,8 @@ That's Basically all this mod does. Adds two items and two grid-powered pieces o
 # Okay. BUT WHY?!
 
 BECAUSE I WANTED MY WALK-IN FREEZERS OKAY!! IS THAT TOO MUCH TO ASK FOR!?
+- Just warning you now, expect really cold, over -20 F cold. Too cold? check the emit.json file.
+
 # Modpack INSTALLATION Guide
 
 **1. Download and install latest release of Cataclysm fork by **Coolcthulhu/BroadFlatNails** - [*Bright Nights*](https://github.com/cataclysmbnteam/Cataclysm-BN/releases)**

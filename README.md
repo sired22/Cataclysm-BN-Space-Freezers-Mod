@@ -19,6 +19,8 @@ BECAUSE I WANTED MY WALK-IN FREEZERS OKAY!! IS THAT TOO MUCH TO ASK FOR!?
 **1. Download and install latest release of Cataclysm fork by **Coolcthulhu/BroadFlatNails** - [*Bright Nights*](https://github.com/cataclysmbnteam/Cataclysm-BN/releases)**
 
 **2. Download the current mod pack by clicking Code - Download ZIP**
+- The 'Space_freezers' folder should be in there somewhere, possibly inside a folder called 'Cataclysm-BN-Space-Freezers-Mod-main'
+- you only want the 'Space_Freezers' folder.
 
 **3. The .zip archive should contain a folder called 'Space_Freezers'. There are TWO ways to get cataclysm bright nights to load mods.**
 

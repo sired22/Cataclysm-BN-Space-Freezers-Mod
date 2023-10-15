@@ -24,11 +24,9 @@ BECAUSE I WANTED MY WALK-IN FREEZERS OKAY!! IS THAT TOO MUCH TO ASK FOR!?
 
 **3. The .zip archive should contain a folder called 'Space_Freezers'. There are TWO ways to get cataclysm bright nights to load mods.**
 
-**3 - 1. You can find the game's exe and create a folder called 'mods' in the same place as the exe. Then move/extract the 'Space_Freezers' folder into the new mods folder beside the games exe file**
-
+ - 1: You can find the game's exe and create a folder called 'mods' in the same place as the exe. Then move/extract the 'Space_Freezers' folder into the new mods folder beside the games exe file**
 # OR
-
-**3 - 2. You can move/extract the 'Space_Freezer' freezer to the already existing mods folder in the games ./data/mods/ folder**
+ - 2: You can move/extract the 'Space_Freezer' freezer to the already existing mods folder in the games ./data/mods/ folder**
 
 **4. I will assume you have a general idea of what you are doing if you're installing mods. You SHOULD find a file called modinfo.json in the following path ./mods/Space_Freezers/**
 

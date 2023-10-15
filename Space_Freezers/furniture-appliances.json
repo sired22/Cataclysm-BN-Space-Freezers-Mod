@@ -1,0 +1,158 @@
+[
+  {
+    "type": "furniture",
+    "abstract": "f_space_freezer_base",
+    "looks_like": "small_space_heater",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "abstract space freezer",
+    "description": "Abstract furniture.  If you see this, something went wrong.",
+    "move_cost_mod": 2,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "EASY_DECONSTRUCT" ],
+    "deconstruct": {
+      "items": [
+        { "item": "small_space_freezer", "count": 1 },
+        { "item": "cable", "charges": 5 },
+        { "item": "power_supply", "count": 1 }
+      ]
+    },
+    "bash": {
+      "str_min": 8,
+      "str_max": 30,
+      "sound": "metal screeching!",
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "power_supply", "count": [ 1, 4 ] },
+        { "item": "scrap", "count": [ 0, 2 ] },
+        { "item": "cable", "charges": [ 1, 4 ] },
+        { "item": "element", "count": [ 2, 6 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer",
+    "copy-from": "f_space_freezer_base",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "space freezer (no power)",
+    "description": "A small portable electric freezer, plugged into a wall.  This one has no power.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer_off",
+    "message": "You turn the freezer off.",
+    "active": [
+      "charge_watcher",
+      { "min_power": 5, "transform": { "id": "f_space_freezer_on", "msg": "The space freezer turns on." } }
+    ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer_off",
+    "copy-from": "f_space_freezer_base",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "space freezer (off)",
+    "description": "A small portable electric freezer, plugged into a wall.  This one is currently turned off.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer",
+    "message": "You turn the freezer on."
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer_on",
+    "copy-from": "f_space_freezer_base",
+    "looks_like": "small_space_heater_on",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "space freezer (on)",
+    "description": "A small portable electric freezer, plugged into a wall.  This one is running and providing cold air.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer_off",
+    "message": "You turn the freezer off.",
+    "light_emitted": 2,
+    "active": [
+      "steady_consumer",
+      {
+        "power": 1,
+        "consume_every": "2 s",
+        "transform": { "id": "f_space_freezer", "msg": "The freezer runs out of power and turns off." }
+      }
+    ],
+    "flags": [ "TRANSPARENT", "EASY_DECONSTRUCT", "EMITTER" ],
+    "emissions": [ "emit_freezermod_air3_stream" ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer_large",
+    "copy-from": "f_space_freezer_base",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "large space freezer (no power)",
+    "description": "A large portable electric freezer, plugged into a wall.  This one has no power.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer_large_off",
+    "message": "You turn the freezer off.",
+    "active": [
+      "charge_watcher",
+      { "min_power": 5, "transform": { "id": "f_space_freezer_large_on", "msg": "The space freezer turns on." } }
+    ],
+    "deconstruct": {
+      "items": [
+        { "item": "large_space_freezer", "count": 1 },
+        { "item": "cable", "charges": 5 },
+        { "item": "power_supply", "count": 1 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer_large_off",
+    "copy-from": "f_space_freezer_base",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "large space freezer (off)",
+    "description": "A large portable electric freezer, plugged into a wall.  This one is currently turned off.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer_large",
+    "message": "You turn the freezer on.",
+    "deconstruct": {
+      "items": [
+        { "item": "large_space_freezer", "count": 1 },
+        { "item": "cable", "charges": 5 },
+        { "item": "power_supply", "count": 1 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_space_freezer_large_on",
+    "copy-from": "f_space_freezer_base",
+    "looks_like": "large_space_heater_on",
+    "symbol": ";",
+    "color": "light_blue",
+    "name": "large space freezer (on)",
+    "description": "A large portable electric freezer, plugged into a wall.  This one is running and providing cold air.",
+    "examine_action": "transform",
+    "transforms_into": "f_space_freezer_large_off",
+    "message": "You turn the freezer off.",
+    "light_emitted": 2,
+    "active": [
+      "steady_consumer",
+      {
+        "power": 1,
+        "consume_every": "2 s",
+        "transform": { "id": "f_space_freezer_large", "msg": "The freezer runs out of power and turns off." }
+      }
+    ],
+    "flags": [ "TRANSPARENT", "EASY_DECONSTRUCT", "EMITTER" ],
+    "emissions": [ "emit_freezermod_air3_blast" ],
+    "deconstruct": {
+      "items": [
+        { "item": "large_space_freezer", "count": 1 },
+        { "item": "cable", "charges": 5 },
+        { "item": "power_supply", "count": 1 }
+      ]
+    }
+  }
+]

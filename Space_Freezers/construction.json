@@ -1,0 +1,30 @@
+[
+  {
+    "type": "construction",
+    "id": "constr_gridspacefreezer",
+    "group": "place_small_space_freezer",
+    "category": "WORKSHOP",
+    "required_skills": [ [ "electronics", 1 ] ],
+    "time": "30 m",
+    "qualities": [ [ { "id": "SCREW", "level": 1 } ] ],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": [ [ [ "small_space_freezer", 1 ] ], [ [ "cable", 5 ] ], [ [ "power_supply", 1 ] ] ],
+    "pre_note": "Will only work if constructed in/on a building that has an electric grid with a mounted battery.",
+    "pre_special": "check_empty",
+    "post_furniture": "f_space_freezer_off"
+  },
+  {
+    "type": "construction",
+    "id": "constr_gridlargespacefreezer",
+    "group": "place_large_space_freezer",
+    "category": "WORKSHOP",
+    "required_skills": [ [ "electronics", 1 ] ],
+    "time": "30 m",
+    "qualities": [ [ { "id": "SCREW", "level": 1 } ] ],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": [ [ [ "large_space_freezer", 1 ] ], [ [ "cable", 5 ] ], [ [ "power_supply", 1 ] ] ],
+    "pre_note": "Will only work if constructed in/on a building that has an electric grid with a mounted battery.",
+    "pre_special": "check_empty",
+    "post_furniture": "f_space_freezer_large_off"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "emit_freezermod_air3_stream",
+    "type": "emit",
+    "field": "fd_cold_air3",
+    "intensity": 3,
+    "qty": 50
+  },
+  {
+    "id": "emit_freezermod_air3_blast",
+    "type": "emit",
+    "field": "fd_cold_air3",
+    "intensity": 3,
+    "qty": 100
+  }
+]

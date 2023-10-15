@@ -1,0 +1,12 @@
+[
+  {
+    "type": "construction_group",
+    "id": "place_small_space_freezer",
+    "name": "Place Small Space freezer"
+  },
+  {
+    "type": "construction_group",
+    "id": "place_large_space_freezer",
+    "name": "Place Large Space freezer"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "space_coolers",
+    "name": "Space Freezers",
+    "authors": [ "Sired22" ],
+    "description": "Adds space freezers. They work the same as space heaters but provide cooling.",
+    "category": "items",
+    "dependencies": [ "bn" ]
+  }
+]

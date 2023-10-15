@@ -1,0 +1,95 @@
+[
+  {
+    "id": "large_space_freezer",
+    "type": "TOOL",
+    "category": "tools",
+	"looks_like": "large_space_heater",
+    "name": { "str": "large space freezer" },
+    "description": "A portable electric freezer that steadily emits cold air.  lowers temperature and fills a larger volume of air than the smaller version.",
+    "weight": "12000 g",
+    "volume": "7500 ml",
+    "price": 20000,
+    "price_postapoc": 500,
+    "to_hit": -3,
+    "bashing": 12,
+    "material": "steel",
+    "symbol": ";",
+    "color": "brown",
+    "ammo": "battery",
+    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "use_action": {
+      "target": "large_space_freezer_on",
+      "msg": "You turn on the freezer.",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "The freezer needs more charge.",
+      "menu_text": "Turn on",
+      "type": "transform"
+    },
+    "magazines": [
+      [ "battery", [ "heavy_battery_cell", "heavy_plus_battery_cell", "heavy_atomic_battery_cell", "heavy_disposable_cell" ] ]
+    ],
+    "magazine_well": "1000 ml"
+  },
+  {
+    "id": "large_space_freezer_on",
+    "copy-from": "large_space_freezer",
+    "type": "TOOL",
+    "name": { "str": "large space freezer (on)", "str_pl": "large space freezers (on)" },
+    "description": "A portable electric freezer that steadily emits cold air.  Lowers temperature and fills a larger volume of air than the smaller version.",
+    "power_draw": 1000000,
+    "emits": [ "emit_freezermod_air3_blast" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "LIGHT_2" ],
+    "revert_to": "large_space_freezer",
+    "use_action": { "target": "large_space_freezer", "msg": "You turn off the freezer.", "menu_text": "Turn off", "type": "transform" },
+    "magazine_well": "1000 ml"
+  },
+  {
+    "id": "small_space_freezer",
+    "type": "TOOL",
+    "category": "tools",
+	"looks_like": "small_space_heater",
+    "name": { "str": "small space freezer" },
+    "description": "A portable electric freezer that steadily emits cold air.  Lowers temperature.",
+    "weight": "6000 g",
+    "volume": "3750 ml",
+    "price": 5000,
+    "price_postapoc": 1500,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": "steel",
+    "symbol": ";",
+    "color": "brown",
+    "ammo": "battery",
+    "flags": [ "ALLOWS_REMOTE_USE" ],
+    "use_action": {
+      "target": "small_space_freezer_on",
+      "msg": "You turn on the freezer.",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "The freezer needs more charge.",
+      "menu_text": "Turn on",
+      "type": "transform"
+    },
+    "magazines": [
+      [
+        "battery",
+        [ "medium_battery_cell", "medium_plus_battery_cell", "medium_atomic_battery_cell", "medium_disposable_cell" ]
+      ]
+    ],
+    "magazine_well": "500 ml"
+  },
+  {
+    "id": "small_space_freezer_on",
+    "copy-from": "small_space_freezer",
+    "type": "TOOL",
+    "name": { "str": "small space freezer (on)", "str_pl": "small space freezers (on)" },
+    "description": "A portable electric freezer that steadily emits cold air.  Lowers temperature.",
+    "power_draw": 500000,
+    "emits": [ "emit_freezermod_air3_stream" ],
+    "flags": [ "ALLOWS_REMOTE_USE", "LIGHT_2" ],
+    "revert_to": "small_space_freezer",
+    "use_action": { "target": "small_space_freezer", "msg": "You turn off the freezer.", "menu_text": "Turn off", "type": "transform" },
+    "magazine_well": "500 ml"
+  }
+]
